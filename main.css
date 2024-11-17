@@ -206,7 +206,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.2);
   border: none;
   cursor: pointer;
   padding: 10px;
