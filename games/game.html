@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Minecraft Game</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #87CEEB; /* Sky blue */
+        }
+        #game {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-template-rows: repeat(10, 50px);
+            gap: 5px;
+        }
+        .block {
+            width: 50px;
+            height: 50px;
+            background-color: #8B4513; /* Brown for dirt */
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        .mined {
+            background-color: #A9A9A9; /* Gray for mined block */
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+
+    <script>
+        const game = document.getElementById('game');
+
+        for (let i = 0; i < 100; i++) {
+            const block = document.createElement('div');
+            block.classList.add('block');
+            block.addEventListener('click', function() {
+                block.classList.toggle('mined');
+            });
+            game.appendChild(block);
+        }
+    </script>
+</body>
+</html>
